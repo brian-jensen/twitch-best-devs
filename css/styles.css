@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #333;
+  font-family: "Inter", sans-serif;
+  min-width: 400px;
+  color: #fff;
+  padding-top: 82px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-weight: 400;
+}
+
+.logo svg {
+  margin-right: 1rem;
+  width: 50px;
+}
+
+.hamburger-menu {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.ham-bar {
+  width: 70%;
+  height: 4px;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top {
+  top: 25%;
+}
+
+.bar-bottom {
+  top: 75%;
+}
+
+.hamburger-menu.active .bar-top {
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+}
+
+.hamburger-menu.active .bar-mid {
+  opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom {
+  transform: translate(-50%, -50%) rotate(-225deg);
+  top: 50%;
+}
+
+.side-bar {
+  position: fixed;
+  top: 82px;
+  height: 100%;
+  right: -300px;
+  width: 300px;
+  color: white;
+  background-color: #222;
+  z-index: 1;
+  transition: right .6s;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.side-bar.active {
+  right: 0;
+}
+
+.side-bar li {
+  padding: 0.5rem 0;
+}
+
+.side-bar a {
+  font-size: 1.25rem;
+  color: white;
+  transition: color .3s;
+}
+
+.side-bar a:hover {
+  color: #9146FF;
+}
+
+.dev {
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 1rem 1rem 2rem;
+  border-bottom: #9146FF 2px solid;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  scroll-margin-top: 132px;
+}
+
+.dev-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dev-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  background-color: #333;
+}
+
+.dev-name h2 {
+  font-weight: 300;
+}
+
+.dev p+p {
+  margin-top: 20px;
+}
+
+.dev p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0 20px;
+}
